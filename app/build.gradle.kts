@@ -62,4 +62,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":core"))
     implementation(project(":features:home"))
+    implementation(project(":features:expenses"))
 }
