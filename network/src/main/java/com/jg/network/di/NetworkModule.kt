@@ -2,7 +2,9 @@ package com.jg.network.di
 
 import com.jg.network.interfaces.ExpenseDataSource
 import com.jg.network.BaseClient
+import com.jg.network.BudgetDataSourceImpl
 import com.jg.network.ExpenseDataSourceImpl
+import com.jg.network.interfaces.BudgetDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,6 +41,12 @@ object NetworkModule {
     @Provides
     fun providesExpenseDataSource(baseClient:BaseClient): ExpenseDataSource {
         return ExpenseDataSourceImpl(baseClient)
+    }
+
+    @Singleton
+    @Provides
+    fun providesBudgetDataSource(baseClient: BaseClient): BudgetDataSource {
+        return BudgetDataSourceImpl(baseClient)
     }
 
 }

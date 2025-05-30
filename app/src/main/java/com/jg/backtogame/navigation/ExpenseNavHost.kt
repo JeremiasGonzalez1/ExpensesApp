@@ -14,7 +14,7 @@ fun ExpenseNavHost(){
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = Route.Detail
+        startDestination = Route.HomeScreen
     )
     {
         composable<Route.HomeScreen> {

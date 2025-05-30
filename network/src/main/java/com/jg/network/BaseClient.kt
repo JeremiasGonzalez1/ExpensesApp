@@ -16,7 +16,7 @@ class BaseClient @Inject constructor(private val client : HttpClient){
     suspend fun get(
         url: String,
         parameters: Map<String, String>? = emptyMap(),
-        token:String?
+        token:String? = null
     ): HttpStatus {
         return try {
             val response = client.get(url) {
